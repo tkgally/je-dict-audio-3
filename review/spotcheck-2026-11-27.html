@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Audio spot check 2026-11-27</title>
+<style>
+:root { --bg:#fafafa; --fg:#1a1a1a; --muted:#666; --card:#fff; --border:#ddd;
+        --ok:#15803d; --err:#b91c1c; --unsure:#a16207; --accent:#2563eb; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#111; --fg:#eee; --muted:#aaa; --card:#1c1c1c; --border:#333;
+          --ok:#4ade80; --err:#f87171; --unsure:#facc15; --accent:#60a5fa; } }
+body { margin:0; background:var(--bg); color:var(--fg);
+       font:16px/1.5 system-ui,-apple-system,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif; }
+main { max-width:860px; margin:0 auto; padding:16px; }
+h1 { font-size:1.4rem; margin:0.5rem 0; } h2 { font-size:1.15rem; margin:1.6rem 0 0.4rem; }
+.intro { color:var(--muted); } .intro p { margin:0.4rem 0; }
+.bar { position:sticky; top:0; background:var(--bg); padding:8px 0; border-bottom:1px solid var(--border);
+       display:flex; gap:8px; flex-wrap:wrap; align-items:center; z-index:1; }
+.bar button { font:inherit; padding:4px 10px; border:1px solid var(--border); border-radius:6px;
+              background:var(--card); color:var(--fg); cursor:pointer; }
+.count { color:var(--muted); font-size:0.9rem; }
+.clip { background:var(--card); border:1px solid var(--border); border-radius:8px; padding:10px 12px; margin:8px 0; }
+.clip .ja { font-size:1.15rem; } .clip .rd { color:var(--muted); font-size:0.9rem; }
+.clip .en { font-size:0.9rem; } .clip .meta { color:var(--muted); font-size:0.8rem; }
+.clip audio { width:100%; max-width:420px; height:36px; margin:6px 0; }
+.rate { display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
+.rate button { font:inherit; min-width:44px; padding:2px 10px; border:1px solid var(--border);
+               border-radius:6px; background:var(--card); color:var(--fg); cursor:pointer; }
+.rate button.on[data-r=ok] { border-color:var(--ok); color:var(--ok); font-weight:600; }
+.rate button.on[data-r=err] { border-color:var(--err); color:var(--err); font-weight:600; }
+.rate button.on[data-r=unsure] { border-color:var(--unsure); color:var(--unsure); font-weight:600; }
+.rate input { flex:1; min-width:140px; font:inherit; font-size:0.9rem; padding:2px 6px;
+              border:1px solid var(--border); border-radius:6px; background:var(--card); color:var(--fg); }
+</style>
+</head>
+<body>
+<main>
+<h1>Audio spot check 2026-11-27</h1>
+<div class="intro"><p>Recordings the dictionary accepted since the last spot check, the riskiest first (a checker objected, or it took more than one attempt), then a random sample.</p><p>Listen to each and mark ✓ correct, ✗ wrong (any misread, missing, added or repeated word) or ? unsure; a comment helps with ✗. Then press <b>Download ratings</b> and upload the file to je-dict-1 at <code>audio/spotchecks/</code> (GitHub: Add file → Upload files). The next audio run adds your verdicts to the regression suite and re-records anything you marked wrong.</p></div>
+<div class="bar">
+  <button id="dl" type="button">Download ratings (JSON)</button>
+  <button id="cp" type="button">Copy ratings</button>
+  <span class="count" id="count"></span>
+</div>
+<div class="clip" data-key="05308_mendokusai_ex1">
+  <div class="ja" lang="ja">料理するのが面倒くさい。</div>
+  <div class="rd" lang="ja">りょうりするのがめんどうくさい。</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/05000/05308_mendokusai_ex1.4f948b54.mp3"></audio>
+  <div class="meta">05308_mendokusai_ex1 · Kore · 2026-11-05T12:44:38Z · a checker objected (kana:google/gemini-3.8-flash, kana:openai/gpt-audio-mini, kana:thinkingmachines/inkling, pcompare:google/gemini-3.8-flash)</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+<div class="clip" data-key="12464_komoji_ex5">
+  <div class="ja" lang="ja">「っ」は小文字の「つ」で、促音を表す。</div>
+  <div class="rd" lang="ja">「っ」はこもじの「つ」で、そくおんをあらわす。</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/12000/12464_komoji_ex5.d1a2e1bf.mp3"></audio>
+  <div class="meta">12464_komoji_ex5 · Kore · 2026-11-05T12:44:38Z · a checker objected (kana:google/gemini-3.8-flash, kana:openai/gpt-audio-mini, kana:thinkingmachines/inkling, pcompare:google/gemini-3.8-flash)</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+<div class="clip" data-key="13428_enmoku_ex3">
+  <div class="ja" lang="ja">コンサートの演目にはベートーヴェンの交響曲が含まれていた。</div>
+  <div class="rd" lang="ja">コンサートのえんもくにはベートーヴェンのこうきょうきょくがふくまれていた。</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/13000/13428_enmoku_ex3.5a40bbf9.mp3"></audio>
+  <div class="meta">13428_enmoku_ex3 · Erinome · 2026-11-05T12:44:38Z · a checker objected (kana:google/gemini-3.8-flash, kana:openai/gpt-audio-mini, kana:thinkingmachines/inkling, pcompare:google/gemini-3.8-flash)</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+<div class="clip" data-key="15254_fumetsu_ex3">
+  <div class="ja" lang="ja">ベートーヴェンの音楽は時代を超えて人々に愛される不滅の芸術だ。</div>
+  <div class="rd" lang="ja">ベートーヴェンのおんがくはじだいをこえてひとびとにあいされるふめつのげいじゅつだ。</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/15000/15254_fumetsu_ex3.3b091126.mp3"></audio>
+  <div class="meta">15254_fumetsu_ex3 · Kore · 2026-11-05T12:44:38Z · a checker objected (kana:google/gemini-3.8-flash, kana:openai/gpt-audio-mini, kana:thinkingmachines/inkling, pcompare:google/gemini-3.8-flash)</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+<div class="clip" data-key="18025_koukyoukyoku_ex1">
+  <div class="ja" lang="ja">ベートーヴェンの交響曲第9番。</div>
+  <div class="rd" lang="ja">べーとーゔぇんのこうきょうきょくだいくばん</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/18000/18025_koukyoukyoku_ex1.e36b9895.mp3"></audio>
+  <div class="meta">18025_koukyoukyoku_ex1 · Charon · 2026-11-05T12:44:38Z · a checker objected (kana:google/gemini-3.8-flash, kana:openai/gpt-audio-mini, kana:thinkingmachines/inkling, pcompare:google/gemini-3.8-flash)</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+<div class="clip" data-key="22214_reikan_ex6">
+  <div class="ja" lang="ja">ベートーヴェンは自然の中から音楽の霊感を受けたと言われている。</div>
+  <div class="rd" lang="ja">ベートーヴェンはしぜんのなかからおんがくのれいかんをうけたといわれている。</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/22000/22214_reikan_ex6.1aacff5e.mp3"></audio>
+  <div class="meta">22214_reikan_ex6 · Iapetus · 2026-11-05T12:44:38Z · a checker objected (kana:google/gemini-3.8-flash, kana:openai/gpt-audio-mini, kana:thinkingmachines/inkling, pcompare:google/gemini-3.8-flash)</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+<div class="clip" data-key="23111_denen_ex5">
+  <div class="ja" lang="ja">ベートーヴェンの「田園」は有名な交響曲だ。</div>
+  <div class="rd" lang="ja">ベートーヴェンの「でんえん」はゆうめいなこうきょうきょくだ。</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/23000/23111_denen_ex5.607b789c.mp3"></audio>
+  <div class="meta">23111_denen_ex5 · Iapetus · 2026-11-05T12:44:38Z · a checker objected (kana:google/gemini-3.8-flash, kana:openai/gpt-audio-mini, kana:thinkingmachines/inkling, pcompare:google/gemini-3.8-flash)</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+<div class="clip" data-key="23847_sanjuusou_ex3">
+  <div class="ja" lang="ja">ベートーヴェンが若いころに書いた三重奏は今でもよく演奏されている。</div>
+  <div class="rd" lang="ja">ベートーヴェンがわかいころにかいたさんじゅうそうはいまでもよくえんそうされている。</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/23500/23847_sanjuusou_ex3.9605da13.mp3"></audio>
+  <div class="meta">23847_sanjuusou_ex3 · Charon · 2026-11-05T12:44:38Z · a checker objected (kana:google/gemini-3.8-flash, kana:openai/gpt-audio-mini, kana:thinkingmachines/inkling, pcompare:google/gemini-3.8-flash)</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+<div class="clip" data-key="24854_chitei_ex3">
+  <div class="ja" lang="ja">ジュール・ヴェルヌの『地底旅行』は今でも多くの読者に愛されている。</div>
+  <div class="rd" lang="ja">ジュール・ヴェルヌの『ちていりょこう』はいまでもおおくのどくしゃにあいされている。</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/24500/24854_chitei_ex3.3715b105.mp3"></audio>
+  <div class="meta">24854_chitei_ex3 · Kore · 2026-11-05T12:44:38Z · a checker objected (kana:google/gemini-3.8-flash, kana:openai/gpt-audio-mini, kana:thinkingmachines/inkling, pcompare:google/gemini-3.8-flash)</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+<div class="clip" data-key="28900_rokkakukei_ex3">
+  <div class="ja" lang="ja">正六角形の内角の和は七百二十度になる。</div>
+  <div class="rd" lang="ja">せいろっかくけいのないかくのわはななひゃくにじゅうどになる。</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/28500/28900_rokkakukei_ex3.d0a543ab.mp3"></audio>
+  <div class="meta">28900_rokkakukei_ex3 · Erinome · 2026-11-05T12:44:38Z · a checker objected (kana:google/gemini-3.8-flash, kana:openai/gpt-audio-mini, kana:thinkingmachines/inkling, pcompare:google/gemini-3.8-flash)</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+<div class="clip" data-key="30107_kishouchou_ex3">
+  <div class="ja" lang="ja">気象庁は地震の規模をマグニチュード六・二と発表した。</div>
+  <div class="rd" lang="ja">きしょうちょうはじしんのきぼをマグニチュードろく・にとはっぴょうした。</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/30000/30107_kishouchou_ex3.b832087b.mp3"></audio>
+  <div class="meta">30107_kishouchou_ex3 · Charon · 2026-11-05T12:44:38Z · a checker objected (kana:google/gemini-3.8-flash, kana:openai/gpt-audio-mini, kana:thinkingmachines/inkling, pcompare:google/gemini-3.8-flash)</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+<div class="clip" data-key="32173_netsujou_ex3">
+  <div class="ja" lang="ja">ベートーヴェンのピアノソナタ「熱情」は、日本でもよく知られている。</div>
+  <div class="rd" lang="ja">ベートーヴェンのピアノソナタ「ねつじょう」は、にほんでもよくしられている。</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/32000/32173_netsujou_ex3.be465769.mp3"></audio>
+  <div class="meta">32173_netsujou_ex3 · Iapetus · 2026-11-05T12:44:38Z · a checker objected (kana:google/gemini-3.8-flash, kana:openai/gpt-audio-mini, kana:thinkingmachines/inkling, pcompare:google/gemini-3.8-flash)</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+<div class="clip" data-key="32201_gengakushijuusou_ex3">
+  <div class="ja" lang="ja">ベートーヴェンの後期の弦楽四重奏曲は、今も多くの演奏家を魅了している。</div>
+  <div class="rd" lang="ja">ベートーヴェンのこうきのげんがくしじゅうそうきょくは、いまもおおくのえんそうかをみりょうしている。</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/32000/32201_gengakushijuusou_ex3.43e4ce8f.mp3"></audio>
+  <div class="meta">32201_gengakushijuusou_ex3 · Iapetus · 2026-11-05T12:44:38Z · a checker objected (kana:google/gemini-3.8-flash, kana:openai/gpt-audio-mini, kana:thinkingmachines/inkling, pcompare:google/gemini-3.8-flash)</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+<div class="clip" data-key="12464_komoji_ex4">
+  <div class="ja" lang="ja">「きゃ」の「ゃ」は小文字だ。</div>
+  <div class="rd" lang="ja">「きゃ」の「ゃ」はこもじだ。</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/12000/12464_komoji_ex4.3c530a92.mp3"></audio>
+  <div class="meta">12464_komoji_ex4 · Iapetus · 2026-11-05T12:44:38Z · a checker objected (kana:google/gemini-3.8-flash, kana:openai/gpt-audio-mini, kana:thinkingmachines/inkling)</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+<div class="clip" data-key="14868_onin_ex4">
+  <div class="ja" lang="ja">「ん」は一つの音韻だ。</div>
+  <div class="rd" lang="ja">「ん」はひとつのおんいんだ。</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/14500/14868_onin_ex4.5373acbd.mp3"></audio>
+  <div class="meta">14868_onin_ex4 · Iapetus · 2026-11-05T12:44:38Z · a checker objected (kana:google/gemini-3.8-flash, kana:openai/gpt-audio-mini, kana:thinkingmachines/inkling)</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+<div class="clip" data-key="17023_hasshamerodi_ex3">
+  <div class="ja" lang="ja">発車メロディが流れ始めたので、急いでホームに向かった。</div>
+  <div class="rd" lang="ja">はっしゃメロディがながれはじめたので、いそいでホームにむかった。</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/17000/17023_hasshamerodi_ex3.c4d3bd58.mp3"></audio>
+  <div class="meta">17023_hasshamerodi_ex3 · Charon · 2026-11-05T12:44:38Z · a checker objected (kana:google/gemini-3.8-flash, kana:openai/gpt-audio-mini, kana:thinkingmachines/inkling)</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+<div class="clip" data-key="20622_ragan_ex2">
+  <div class="ja" lang="ja">裸眼視力は左右とも0.3です。</div>
+  <div class="rd" lang="ja">らがんしりょくはさゆうともれいてんさんです</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/20500/20622_ragan_ex2.1bf6f190.mp3"></audio>
+  <div class="meta">20622_ragan_ex2 · Iapetus · 2026-10-26T02:31:34Z · a checker objected (kana:openai/gpt-audio-mini); accepted on attempt 5</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+<div class="clip" data-key="23466_youon_ex2">
+  <div class="ja" lang="ja">拗音は小さい「ゃ」「ゅ」「ょ」を使って書く。</div>
+  <div class="rd" lang="ja">ようおんはちいさい「ゃ」「ゅ」「ょ」をつかってかく。</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/23000/23466_youon_ex2.9449f124.mp3"></audio>
+  <div class="meta">23466_youon_ex2 · Iapetus · 2026-11-05T12:44:38Z · a checker objected (kana:google/gemini-3.8-flash, kana:openai/gpt-audio-mini, kana:thinkingmachines/inkling)</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+<div class="clip" data-key="24009_yuiitsusei_ex3">
+  <div class="ja" lang="ja">データベースではIDの唯一性を保証する必要がある。</div>
+  <div class="rd" lang="ja">でーたべーすではあいでぃーのゆいいつせいをほしょうするひつようがある</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/24000/24009_yuiitsusei_ex3.23140276.mp3"></audio>
+  <div class="meta">24009_yuiitsusei_ex3 · Iapetus · 2026-10-26T02:31:34Z · a checker objected (kana:openai/gpt-audio-mini); accepted on attempt 5</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+<div class="clip" data-key="25142_kaikinbi_ex2">
+  <div class="ja" lang="ja">ボジョレー・ヌーヴォーの解禁日は毎年十一月の第三木曜日だ。</div>
+  <div class="rd" lang="ja">ボジョレー・ヌーヴォーのかいきんびはまいとしじゅういちがつのだいさんもくようびだ。</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/25000/25142_kaikinbi_ex2.d9519bd5.mp3"></audio>
+  <div class="meta">25142_kaikinbi_ex2 · Iapetus · 2026-11-05T12:44:38Z · a checker objected (kana:google/gemini-3.8-flash, kana:openai/gpt-audio-mini, kana:thinkingmachines/inkling)</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+<div class="clip" data-key="32519_izon_ex1">
+  <div class="ja" lang="ja">異存はありません。</div>
+  <div class="rd" lang="ja">いぞんはありません。</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/32500/32519_izon_ex1.3018b023.mp3"></audio>
+  <div class="meta">32519_izon_ex1 · Iapetus · 2026-10-31T13:49:01Z</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+<div class="clip" data-key="32760_kyuubureeki_ex1">
+  <div class="ja" lang="ja">急ブレーキをかけた。</div>
+  <div class="rd" lang="ja">きゅうブレーキをかけた。</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/32500/32760_kyuubureeki_ex1.f74f5d0a.mp3"></audio>
+  <div class="meta">32760_kyuubureeki_ex1 · Kore · 2026-11-05T01:16:17Z</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+<div class="clip" data-key="32533_namamono_ex4">
+  <div class="ja" lang="ja">海外への荷物には、肉や果物などの生物を入れることができない。</div>
+  <div class="rd" lang="ja">かいがいへのにもつには、にくやくだものなどのなまものをいれることができない。</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/32500/32533_namamono_ex4.4b408533.mp3"></audio>
+  <div class="meta">32533_namamono_ex4 · Kore · 2026-10-31T13:49:01Z</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+<div class="clip" data-key="32716_kachigumi_ex1">
+  <div class="ja" lang="ja">勝ち組になりたい。</div>
+  <div class="rd" lang="ja">かちぐみになりたい。</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/32500/32716_kachigumi_ex1.93fc76df.mp3"></audio>
+  <div class="meta">32716_kachigumi_ex1 · Kore · 2026-11-03T13:24:42Z</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+<div class="clip" data-key="33584_fukuen_ex1">
+  <div class="ja" lang="ja">元彼と復縁した。</div>
+  <div class="rd" lang="ja">もとかれとふくえんした。</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/33500/33584_fukuen_ex1.4724f019.mp3"></audio>
+  <div class="meta">33584_fukuen_ex1 · Kore · 2026-11-15T16:38:04Z</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+<div class="clip" data-key="33911_kaburimono_ex1">
+  <div class="ja" lang="ja">被り物を取る。</div>
+  <div class="rd" lang="ja">かぶりものをとる。</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/33500/33911_kaburimono_ex1.0a81a9b2.mp3"></audio>
+  <div class="meta">33911_kaburimono_ex1 · Iapetus · 2026-11-22T02:15:11Z</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+<div class="clip" data-key="33724_mindo_ex2">
+  <div class="ja" lang="ja">試合の後にごみを拾う観客を見て、民度の高さに驚いた。</div>
+  <div class="rd" lang="ja">しあいのあとにごみをひろうかんきゃくをみて、みんどのたかさにおどろいた。</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/33500/33724_mindo_ex2.5cdced24.mp3"></audio>
+  <div class="meta">33724_mindo_ex2 · Charon · 2026-11-18T13:44:29Z</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+<div class="clip" data-key="33009_chouhatsu_ex1">
+  <div class="ja" lang="ja">長髪の男性。</div>
+  <div class="rd" lang="ja">ちょうはつのだんせい。</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/33000/33009_chouhatsu_ex1.5ebdf407.mp3"></audio>
+  <div class="meta">33009_chouhatsu_ex1 · Charon · 2026-11-08T00:26:32Z</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+<div class="clip" data-key="33301_choutouha_ex2">
+  <div class="ja" lang="ja">超党派で法案をまとめた。</div>
+  <div class="rd" lang="ja">ちょうとうはでほうあんをまとめた。</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/33000/33301_choutouha_ex2.c27362b9.mp3"></audio>
+  <div class="meta">33301_choutouha_ex2 · Erinome · 2026-11-10T09:19:26Z</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+<div class="clip" data-key="23586_enzanshi_ex3">
+  <div class="ja" lang="ja">論理演算子のANDとORは、複数の条件を組み合わせるときに使われる。</div>
+  <div class="rd" lang="ja">ろんりえんざんしのあんどとおあはふくすうのじょうけんをくみあわせるときにつかわれる</div>
+  
+  <audio controls preload="none" src="https://tkgally.github.io/je-dict-audio-3/23500/23586_enzanshi_ex3.2d20fae1.mp3"></audio>
+  <div class="meta">23586_enzanshi_ex3 · Kore · 2026-10-26T02:31:34Z</div>
+  <div class="rate"><button type="button" data-r="ok" title="Correct">✓</button>
+  <button type="button" data-r="err" title="Wrong">✗</button>
+  <button type="button" data-r="unsure" title="Unsure">?</button>
+  <input type="text" placeholder="comment (optional)" aria-label="comment"></div>
+</div>
+</main>
+<script>
+(function() {
+  var PAGE = "spotcheck-2026-11-27";
+  var KEY = 'audio-ratings:' + PAGE;
+  var ratings = {};
+  try { ratings = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { ratings = {}; }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(ratings)); } catch (e) {} count(); }
+  function count() {
+    var n = document.querySelectorAll('.clip').length, done = 0;
+    for (var k in ratings) if (ratings[k].r) done++;
+    document.getElementById('count').textContent = done + ' of ' + n + ' rated';
+  }
+  function paint(clip) {
+    var r = ratings[clip.dataset.key] || {};
+    clip.querySelectorAll('.rate button').forEach(function(b) { b.classList.toggle('on', b.dataset.r === r.r); });
+    var inp = clip.querySelector('.rate input'); if (inp) inp.value = r.c || '';
+  }
+  document.querySelectorAll('.clip').forEach(function(clip) {
+    paint(clip);
+    clip.querySelectorAll('.rate button').forEach(function(b) {
+      b.addEventListener('click', function() {
+        var k = clip.dataset.key, cur = ratings[k] || {};
+        cur.r = (cur.r === b.dataset.r) ? '' : b.dataset.r; ratings[k] = cur; paint(clip); save();
+      });
+    });
+    var inp = clip.querySelector('.rate input');
+    if (inp) inp.addEventListener('input', function() {
+      var k = clip.dataset.key, cur = ratings[k] || {}; cur.c = inp.value; ratings[k] = cur; save();
+    });
+    var au = clip.querySelector('audio');
+    if (au) au.addEventListener('play', function() {
+      document.querySelectorAll('audio').forEach(function(o) { if (o !== au) o.pause(); });
+    });
+  });
+  function payload() {
+    return JSON.stringify({page: PAGE, exported: new Date().toISOString(), ratings: ratings}, null, 1);
+  }
+  document.getElementById('dl').addEventListener('click', function() {
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([payload()], {type: 'application/json'}));
+    a.download = 'ratings_' + PAGE + '.json'; document.body.appendChild(a); a.click(); a.remove();
+  });
+  document.getElementById('cp').addEventListener('click', function() {
+    var t = payload();
+    if (navigator.clipboard) navigator.clipboard.writeText(t).then(function() { alert('Copied.'); });
+    else prompt('Copy this:', t);
+  });
+  count();
+})();
+</script>
+</body>
+</html>
